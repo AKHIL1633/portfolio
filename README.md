@@ -1,7 +1,7 @@
 # P Akhil — Portfolio
 
-A fast, responsive single-page portfolio for **P Akhil** — Full-Stack & AI Engineer,
-M.Tech CS @ IIIT Naya Raipur.
+A fast, responsive single-page portfolio for **P Akhil** — Python Back End Developer & AI Engineer
+(Celery, Redis, FastAPI, Django), M.Tech CS, IIIT Naya Raipur.
 
 🔗 **Live:** https://akhil1633.github.io/portfolio/
 
@@ -10,7 +10,7 @@ M.Tech CS @ IIIT Naya Raipur.
 - Pure static site — **no build step, no dependencies** (HTML + CSS + vanilla JS)
 - Dark, modern design with a subtle animated grid and glow
 - Typing role animation, animated stat counters, and scroll-reveal sections
-- Data-driven: projects, skills, publications and achievements render from arrays in [`script.js`](script.js)
+- Data-driven: skills, experience, projects, publications and achievements render from arrays in [`script.js`](script.js)
 - Fully responsive with a mobile nav, and respects `prefers-reduced-motion`
 
 ## Structure

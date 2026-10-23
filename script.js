@@ -1,30 +1,61 @@
 // ---------- Data ----------
 const SKILLS = [
+  { cat: 'Async & Task Queues', items: ['Celery', 'Redis', 'Background workers', 'Task chaining', 'BullMQ'] },
+  { cat: 'Backend & APIs', items: ['Python', 'FastAPI', 'Django REST', 'Node.js', 'Express', '.NET Core', 'REST', 'JWT'] },
+  { cat: 'Databases', items: ['PostgreSQL', 'SQL Server', 'MongoDB', 'Redis', 'SQLAlchemy', 'Alembic', 'Prisma'] },
+  { cat: 'DevOps & Cloud', items: ['Docker', 'Kubernetes', 'AWS (EC2, EKS)', 'Terraform', 'GitHub Actions'] },
+  { cat: 'AI & LLM', items: ['LangChain', 'LangGraph', 'PyTorch', 'Hugging Face', 'OpenAI', 'Gemini'] },
   { cat: 'Frontend & Mobile', items: ['Next.js', 'React', 'React Native', 'TypeScript', 'Tailwind CSS'] },
-  { cat: 'Backend & APIs', items: ['FastAPI', 'Node.js', 'Express', 'Python', 'REST'] },
-  { cat: 'Databases', items: ['PostgreSQL', 'MongoDB', 'Redis', 'Prisma'] },
-  { cat: 'DevOps & Cloud', items: ['Docker', 'GitHub Actions', 'Vercel', 'Railway', 'AWS'] },
-  { cat: 'AI, ML & CV', items: ['PyTorch', 'Hugging Face', 'LangChain', 'OpenCV', 'Gemini', 'GPT-4o'] },
+];
+
+const EXPERIENCE = [
+  {
+    company: 'Siemens Technology', role: 'Software Development Intern · Industry 4.0', dates: 'Sep 2025 – Feb 2026',
+    points: [
+      'Developed Python backend services and REST APIs for Industry 4.0 applications in the R&D team.',
+      'Built asynchronous and scheduled background jobs that run long-running processing outside the API request cycle.',
+    ],
+  },
+  {
+    company: 'Tata Consultancy Services', role: 'Associate Software Engineer · Hyderabad', dates: 'Jan 2021 – 2022 · 1.5 yrs',
+    points: [
+      'Developed REST APIs and data access layers with .NET Core Web API, Entity Framework and SQL Server.',
+      'Built the backend of a self-service Talent Acquisition portal (Node.js, MongoDB).',
+      'Built dashboards monitoring backup and storage jobs across servers; received the TCS Star Performer Award.',
+    ],
+  },
 ];
 
 const PROJECTS = [
   {
-    name: 'Homeward Paws', badge: 'MERN',
-    desc: 'Story-led pet-adoption platform — full MERN build with JWT cookie auth, role & ownership guards, image uploads, and a GSAP scroll narrative.',
-    stack: ['React 19', 'Vite', 'Express', 'MongoDB', 'Docker'],
-    repo: 'https://github.com/AKHIL1633/homeward-paws', live: null,
+    name: 'Order Processing Platform', badge: 'Celery',
+    desc: 'Async order API that responds immediately while Celery workers validate stock, process payment, update status and send notifications outside the request cycle.',
+    stack: ['Python', 'Celery', 'Redis', 'Docker'],
+    repo: 'https://github.com/AKHIL1633/order-processing-platform', live: null,
+  },
+  {
+    name: 'GitHub PR AI Reviewer', badge: 'Celery + AI',
+    desc: 'Webhook service that queues each pull request as Celery jobs; four LangGraph agents review it in parallel and post inline comments. Deployed on AWS EKS.',
+    stack: ['Python', 'Celery', 'Redis', 'LangGraph', 'AWS EKS', 'Terraform'],
+    repo: 'https://github.com/AKHIL1633/github-pr-ai-reviewer', live: null,
+  },
+  {
+    name: 'JobBoard Pro', badge: 'Django',
+    desc: 'Recruitment platform with role-based auth and application tracking; Celery workers send notifications asynchronously so API responses stay fast.',
+    stack: ['Django REST', 'Celery', 'Redis', 'PostgreSQL', 'React', 'Docker'],
+    repo: 'https://github.com/AKHIL1633/jobboard-pro', live: null,
+  },
+  {
+    name: 'ResumeIQ', badge: 'API',
+    desc: 'Resume screening and ranking API with JWT auth, a weighted scoring engine, Alembic migrations and 36 passing tests in CI.',
+    stack: ['FastAPI', 'SQLAlchemy', 'Alembic', 'Docker'],
+    repo: 'https://github.com/AKHIL1633/resume-screener', live: null,
   },
   {
     name: 'PulseDesk', badge: 'AI Agent',
     desc: 'AI ticket-triage agent — mobile app + web dashboard + API, with an LLM classifying and drafting responses under human review.',
     stack: ['Express', 'Next.js', 'React Native', 'Gemini', 'Zod'],
     repo: 'https://github.com/AKHIL1633/pulsedesk', live: null,
-  },
-  {
-    name: 'ZeroxAI Planner', badge: '~14K LOC',
-    desc: 'Multi-LLM vision platform with two-pass extraction, LLM-as-corrector, and Domain-Driven Design for reliability at scale.',
-    stack: ['Python', 'FastAPI', 'React 19', 'Gemini', 'GPT-4o', 'Groq'],
-    repo: 'https://github.com/AKHIL1633/ZeroxAI-Planner', live: null,
   },
   {
     name: 'GrowEasy CSV Importer', badge: 'Live',
@@ -34,16 +65,10 @@ const PROJECTS = [
     live: 'https://groweasy-csv-importer-web-ten.vercel.app',
   },
   {
-    name: 'License Plate Detection', badge: 'CV',
-    desc: 'Custom-trained YOLOv8 + OCR pipeline with live WebRTC video detection of vehicle number plates.',
-    stack: ['Python', 'YOLOv8', 'EasyOCR', 'Streamlit'],
-    repo: 'https://github.com/AKHIL1633/Automatic_License_Plate_Detection', live: null,
-  },
-  {
-    name: 'ResumeIQ', badge: 'SaaS',
-    desc: 'Full-stack resume screening SaaS with JWT auth, a weighted scoring engine, and 36 passing tests.',
-    stack: ['FastAPI', 'React', 'SQLAlchemy', 'Docker'],
-    repo: 'https://github.com/AKHIL1633/resume-screener', live: null,
+    name: 'Homeward Paws', badge: 'MERN',
+    desc: 'Story-led pet-adoption platform — full MERN build with JWT cookie auth, role & ownership guards, image uploads, and a GSAP scroll narrative.',
+    stack: ['React 19', 'Vite', 'Express', 'MongoDB', 'Docker'],
+    repo: 'https://github.com/AKHIL1633/homeward-paws', live: null,
   },
   {
     name: 'TaskFlow', badge: 'Live',
@@ -53,10 +78,10 @@ const PROJECTS = [
     live: 'https://taskflow-lake-nu.vercel.app',
   },
   {
-    name: 'SpendWise', badge: 'Full-stack',
-    desc: 'Personal finance tracker with JWT auth, a real database, and interactive spending charts.',
-    stack: ['Next.js', 'NextAuth', 'Prisma', 'PostgreSQL', 'Recharts'],
-    repo: 'https://github.com/AKHIL1633/spendwise', live: null,
+    name: 'License Plate Detection', badge: 'CV',
+    desc: 'Custom-trained YOLOv8 + OCR pipeline with live WebRTC video detection of vehicle number plates.',
+    stack: ['Python', 'YOLOv8', 'EasyOCR', 'Streamlit'],
+    repo: 'https://github.com/AKHIL1633/Automatic_License_Plate_Detection', live: null,
   },
 ];
 
@@ -74,7 +99,7 @@ const ACHIEVEMENTS = [
   { icon: '🏅', title: 'TCS Star Performer', note: 'Award' },
 ];
 
-const ROLES = ['Full-Stack Engineer', 'AI / LLM Engineer', 'Deep Learning Researcher', 'Problem Solver'];
+const ROLES = ['Python Back End Developer', 'Celery & Async Systems', 'AI / LLM Engineer', 'Problem Solver'];
 
 // ---------- Render ----------
 const el = (tag, cls, html) => { const n = document.createElement(tag); if (cls) n.className = cls; if (html != null) n.innerHTML = html; return n; };
@@ -110,6 +135,19 @@ function renderProjects() {
     const r = el('a', null, 'Code →'); r.href = p.repo; r.target = '_blank'; r.rel = 'noopener'; links.appendChild(r);
     card.appendChild(links);
     grid.appendChild(card);
+  });
+}
+
+function renderExperience() {
+  const list = document.getElementById('expList');
+  EXPERIENCE.forEach((x) => {
+    const li = el('li', 'reveal');
+    li.appendChild(el('span', 'pub-title', `${x.company} — ${x.role}`));
+    li.appendChild(el('span', 'pub-venue', x.dates));
+    const ul = el('ul', 'exp-points');
+    x.points.forEach((p) => ul.appendChild(el('li', null, p)));
+    li.appendChild(ul);
+    list.appendChild(li);
   });
 }
 
@@ -190,7 +228,7 @@ function setupNav() {
 
 // ---------- Init ----------
 document.addEventListener('DOMContentLoaded', () => {
-  renderSkills(); renderProjects(); renderPublications(); renderAchievements();
+  renderSkills(); renderExperience(); renderProjects(); renderPublications(); renderAchievements();
   typeRoles(); setupNav();
   // counters run once the hero stats are visible
   const statWrap = document.querySelector('.hero-stats');

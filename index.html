@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="P Akhil — Full-Stack & AI Engineer. M.Tech CS @ IIIT Naya Raipur. Building multi-agent LLM systems and production full-stack apps." />
+    <meta name="description" content="P Akhil — Python Back End Developer and AI Engineer. Celery, Redis, FastAPI and Django backends. M.Tech CS, IIIT Naya Raipur." />
     <meta name="author" content="P Akhil" />
-    <meta property="og:title" content="P Akhil — Full-Stack & AI Engineer" />
-    <meta property="og:description" content="M.Tech CS @ IIIT Naya Raipur · Ex-Siemens · Ex-TCS. Multi-agent LLM systems, full-stack apps, applied deep learning." />
+    <meta property="og:title" content="P Akhil — Python Back End Developer &amp; AI Engineer" />
+    <meta property="og:description" content="M.Tech CS, IIIT Naya Raipur · Ex-Siemens · Ex-TCS. Async Python backends with Celery and Redis, APIs and AI systems." />
     <meta property="og:type" content="website" />
-    <title>P Akhil — Full-Stack &amp; AI Engineer</title>
+    <title>P Akhil — Python Back End Developer &amp; AI Engineer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -24,6 +24,7 @@
       <nav class="nav-links" aria-label="Primary">
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#publications">Research</a>
         <a href="#contact">Contact</a>
@@ -42,8 +43,8 @@
           <h1 class="hero-name">P Akhil</h1>
           <h2 class="hero-role" id="roleType"></h2>
           <p class="hero-tag">
-            M.Tech CS @ IIIT Naya Raipur · Ex-Siemens Technology · Ex-TCS.<br />
-            Turning research into shipped products — multi-agent LLM systems, full-stack apps, and applied deep learning.
+            M.Tech CS, IIIT Naya Raipur · Ex-Siemens Technology · Ex-TCS.<br />
+            I build asynchronous Python backends — Celery and Redis task queues, FastAPI and Django APIs — and the AI systems that run on them.
           </p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#projects">View Projects</a>
@@ -67,19 +68,20 @@
       <section class="section" id="about">
         <div class="section-head reveal">
           <span class="section-kicker">01 — About</span>
-          <h2>Engineer across the full stack and the model layer</h2>
+          <h2>Backend engineer for async systems and AI workloads</h2>
         </div>
         <div class="about-grid">
           <div class="about-copy reveal">
             <p>
-              I'm a full-stack and AI engineer who likes owning a problem end to end — from the
-              data and the model to the API, the UI, and the deploy. Currently pursuing my
-              <strong>M.Tech in Computer Science at IIIT Naya Raipur (CGPA 9.04)</strong>.
+              I'm a Python back end developer who likes owning a problem end to end — the API, the
+              database, the background workers and the deploy. I hold an
+              <strong>M.Tech in Computer Science from IIIT Naya Raipur (CGPA 9.04)</strong>.
             </p>
             <p>
-              Previously I worked on Industry 4.0 R&amp;D at <strong>Siemens Technology</strong> and spent
-              ~1.5 years as a <strong>Software Engineer at TCS</strong>. These days I'm focused on
-              multi-agent LLM systems, React Native, and making AI reliable enough for production.
+              Most recently I was a <strong>Software Development Intern at Siemens Technology</strong>
+              (Industry 4.0), building Python backend services and scheduled background jobs. Before that I
+              spent ~1.5 years as an <strong>Associate Software Engineer at TCS</strong>. I focus on
+              queue-driven backends with Celery and Redis, and on moving slow and AI workloads off the request path.
             </p>
             <p class="about-fun">🔑 Fun fact: I debug production issues faster than I find my keys.</p>
           </div>
@@ -87,7 +89,7 @@
             <li><span>📍</span> Raipur, India</li>
             <li><span>🎓</span> M.Tech CSE · IIIT Naya Raipur</li>
             <li><span>🏢</span> Ex-Siemens · Ex-TCS</li>
-            <li><span>🧠</span> Multi-agent LLMs · Production AI</li>
+            <li><span>⚙️</span> Python · Celery · Redis · FastAPI · Django</li>
             <li><span>📄</span> 4 research publications</li>
             <li><span>🎯</span> GATE CS 2024 · Adobe Hackathon Finalist</li>
           </ul>
@@ -103,10 +105,19 @@
         <div class="skills-grid" id="skillsGrid"></div>
       </section>
 
+      <!-- Experience -->
+      <section class="section" id="experience">
+        <div class="section-head reveal">
+          <span class="section-kicker">03 — Experience</span>
+          <h2>Where I've worked</h2>
+        </div>
+        <ol class="pub-list" id="expList"></ol>
+      </section>
+
       <!-- Projects -->
       <section class="section" id="projects">
         <div class="section-head reveal">
-          <span class="section-kicker">03 — Work</span>
+          <span class="section-kicker">04 — Work</span>
           <h2>Featured projects</h2>
         </div>
         <div class="projects-grid" id="projectsGrid"></div>
@@ -118,7 +129,7 @@
       <!-- Publications -->
       <section class="section" id="publications">
         <div class="section-head reveal">
-          <span class="section-kicker">04 — Research</span>
+          <span class="section-kicker">05 — Research</span>
           <h2>Publications</h2>
         </div>
         <ol class="pub-list" id="pubList"></ol>
@@ -127,7 +138,7 @@
       <!-- Achievements -->
       <section class="section" id="achievements">
         <div class="section-head reveal">
-          <span class="section-kicker">05 — Milestones</span>
+          <span class="section-kicker">06 — Milestones</span>
           <h2>Achievements</h2>
         </div>
         <div class="ach-grid" id="achGrid"></div>
@@ -136,9 +147,9 @@
       <!-- Contact -->
       <section class="section contact" id="contact">
         <div class="contact-card reveal">
-          <span class="section-kicker">06 — Contact</span>
+          <span class="section-kicker">07 — Contact</span>
           <h2>Let's build something together</h2>
-          <p>Open to SDE &amp; AI Engineer roles and interesting collaborations. The fastest way to reach me is email.</p>
+          <p>Open to Python Back End Developer, SDE and AI Engineer roles, and available to join immediately. The fastest way to reach me is email.</p>
           <div class="contact-actions">
             <a class="btn btn-primary" href="mailto:akhil.kartik371@gmail.com">akhil.kartik371@gmail.com</a>
             <a class="btn btn-ghost" href="https://linkedin.com/in/p-akhil-a68421177" target="_blank" rel="noopener">LinkedIn</a>
