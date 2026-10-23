@@ -35,6 +35,12 @@ const PROJECT_GROUPS = [
 const PROJECTS = [
   // MERN & Full Stack
   {
+    group: 'mern', name: 'Roost', badge: 'Full-stack',
+    desc: 'Coliving and hostel booking platform: live bed inventory, coliving passes with dynamic pricing, Razorpay checkout with reservation locks and webhook reconciliation, guest web check-in with OCR, and tokenized breakfast ordering.',
+    stack: ['Next.js 16', 'React 19', 'NestJS', 'PostgreSQL', 'Razorpay', 'Tailwind CSS'],
+    repo: 'https://github.com/AKHIL1633/roost', live: null,
+  },
+  {
     group: 'mern', name: 'Homeward Paws', badge: 'MERN',
     desc: 'Story-led pet-adoption platform — full MERN build with JWT cookie auth, role & ownership guards, image uploads, and a GSAP scroll narrative.',
     stack: ['React 19', 'Vite', 'Express', 'MongoDB', 'Docker'],
