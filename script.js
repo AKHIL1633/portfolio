@@ -57,8 +57,8 @@ const PROJECTS = [
   // AI
   {
     group: 'ai', name: 'GitHub PR AI Reviewer', badge: 'Multi-agent',
-    desc: 'Four LangGraph agents (static analysis, security, style, architecture) review every pull request in parallel and post inline comments. Celery workers, deployed on AWS EKS.',
-    stack: ['Python', 'LangGraph', 'Celery', 'Redis', 'AWS EKS', 'Terraform'],
+    desc: 'GitHub App where four parallel LangGraph agents review every pull request, post line-accurate inline comments, and learn each repo\'s recurring issues via pgvector. FastAPI microservices on AWS EKS with a CI-gated quality benchmark.',
+    stack: ['Python', 'FastAPI', 'LangGraph', 'pgvector', 'Celery', 'AWS EKS', 'Terraform'],
     repo: 'https://github.com/AKHIL1633/github-pr-ai-reviewer', live: null,
   },
   {
