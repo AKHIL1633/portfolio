@@ -1,7 +1,7 @@
 # P Akhil — Portfolio
 
-A fast, responsive single-page portfolio for **P Akhil** — Python Back End Developer & AI Engineer
-(Celery, Redis, FastAPI, Django), M.Tech CS, IIIT Naya Raipur.
+A fast, responsive single-page portfolio for **P Akhil** — Full Stack Developer (MERN, Python & AI),
+M.Tech CS, IIIT Naya Raipur.
 
 🔗 **Live:** https://akhil1633.github.io/portfolio/
 

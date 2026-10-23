@@ -1,13 +1,4 @@
 // ---------- Data ----------
-const SKILLS = [
-  { cat: 'Async & Task Queues', items: ['Celery', 'Redis', 'Background workers', 'Task chaining', 'BullMQ'] },
-  { cat: 'Backend & APIs', items: ['Python', 'FastAPI', 'Django REST', 'Node.js', 'Express', '.NET Core', 'REST', 'JWT'] },
-  { cat: 'Databases', items: ['PostgreSQL', 'SQL Server', 'MongoDB', 'Redis', 'SQLAlchemy', 'Alembic', 'Prisma'] },
-  { cat: 'DevOps & Cloud', items: ['Docker', 'Kubernetes', 'AWS (EC2, EKS)', 'Terraform', 'GitHub Actions'] },
-  { cat: 'AI & LLM', items: ['LangChain', 'LangGraph', 'PyTorch', 'Hugging Face', 'OpenAI', 'Gemini'] },
-  { cat: 'Frontend & Mobile', items: ['Next.js', 'React', 'React Native', 'TypeScript', 'Tailwind CSS'] },
-];
-
 const EXPERIENCE = [
   {
     company: 'Siemens Technology', role: 'Software Development Intern · Industry 4.0', dates: 'Sep 2025 – Feb 2026',
@@ -26,62 +17,106 @@ const EXPERIENCE = [
   },
 ];
 
+const SKILLS = [
+  { cat: 'Frontend & Mobile', items: ['React', 'Next.js', 'React Native', 'TypeScript', 'JavaScript', 'Tailwind CSS'] },
+  { cat: 'Backend (Node & Python)', items: ['Node.js', 'Express', 'Python', 'FastAPI', 'Django REST', '.NET Core', 'REST', 'JWT'] },
+  { cat: 'Databases', items: ['MongoDB', 'PostgreSQL', 'SQL Server', 'Redis', 'Prisma', 'SQLAlchemy'] },
+  { cat: 'Async & Queues', items: ['Celery', 'BullMQ', 'Redis', 'Background workers'] },
+  { cat: 'AI & LLM', items: ['LangChain', 'LangGraph', 'PyTorch', 'Hugging Face', 'OpenAI', 'Gemini'] },
+  { cat: 'DevOps & Cloud', items: ['Docker', 'Kubernetes', 'AWS (EC2, EKS)', 'Terraform', 'GitHub Actions', 'Vercel'] },
+];
+
+const PROJECT_GROUPS = [
+  { id: 'mern', title: 'MERN & Full Stack', blurb: 'React front ends with Node/Express or Next.js APIs, end to end.' },
+  { id: 'ai', title: 'AI Projects', blurb: 'Products with an LLM or a trained model at the core.' },
+  { id: 'python', title: 'Python Backend', blurb: 'APIs, task queues and background workers in Python.' },
+];
+
 const PROJECTS = [
+  // MERN & Full Stack
   {
-    name: 'Order Processing Platform', badge: 'Celery',
-    desc: 'Async order API that responds immediately while Celery workers validate stock, process payment, update status and send notifications outside the request cycle.',
-    stack: ['Python', 'Celery', 'Redis', 'Docker'],
-    repo: 'https://github.com/AKHIL1633/order-processing-platform', live: null,
-  },
-  {
-    name: 'GitHub PR AI Reviewer', badge: 'Celery + AI',
-    desc: 'Webhook service that queues each pull request as Celery jobs; four LangGraph agents review it in parallel and post inline comments. Deployed on AWS EKS.',
-    stack: ['Python', 'Celery', 'Redis', 'LangGraph', 'AWS EKS', 'Terraform'],
-    repo: 'https://github.com/AKHIL1633/github-pr-ai-reviewer', live: null,
-  },
-  {
-    name: 'JobBoard Pro', badge: 'Django',
-    desc: 'Recruitment platform with role-based auth and application tracking; Celery workers send notifications asynchronously so API responses stay fast.',
-    stack: ['Django REST', 'Celery', 'Redis', 'PostgreSQL', 'React', 'Docker'],
-    repo: 'https://github.com/AKHIL1633/jobboard-pro', live: null,
-  },
-  {
-    name: 'ResumeIQ', badge: 'API',
-    desc: 'Resume screening and ranking API with JWT auth, a weighted scoring engine, Alembic migrations and 36 passing tests in CI.',
-    stack: ['FastAPI', 'SQLAlchemy', 'Alembic', 'Docker'],
-    repo: 'https://github.com/AKHIL1633/resume-screener', live: null,
-  },
-  {
-    name: 'PulseDesk', badge: 'AI Agent',
-    desc: 'AI ticket-triage agent — mobile app + web dashboard + API, with an LLM classifying and drafting responses under human review.',
-    stack: ['Express', 'Next.js', 'React Native', 'Gemini', 'Zod'],
-    repo: 'https://github.com/AKHIL1633/pulsedesk', live: null,
-  },
-  {
-    name: 'GrowEasy CSV Importer', badge: 'Live',
-    desc: 'AI app that maps any CSV layout onto a fixed CRM schema, with production-grade retry and validation.',
-    stack: ['Next.js', 'Express', 'TypeScript', 'Gemini'],
-    repo: 'https://github.com/AKHIL1633/groweasy-csv-importer',
-    live: 'https://groweasy-csv-importer-web-ten.vercel.app',
-  },
-  {
-    name: 'Homeward Paws', badge: 'MERN',
+    group: 'mern', name: 'Homeward Paws', badge: 'MERN',
     desc: 'Story-led pet-adoption platform — full MERN build with JWT cookie auth, role & ownership guards, image uploads, and a GSAP scroll narrative.',
     stack: ['React 19', 'Vite', 'Express', 'MongoDB', 'Docker'],
     repo: 'https://github.com/AKHIL1633/homeward-paws', live: null,
   },
   {
-    name: 'TaskFlow', badge: 'Live',
+    group: 'mern', name: 'TaskFlow', badge: 'Live',
     desc: 'Full-stack Kanban board with drag-and-drop, a REST API, and CI/CD on every push.',
     stack: ['Next.js 14', 'TypeScript', 'Jest', 'GitHub Actions'],
     repo: 'https://github.com/AKHIL1633/taskflow',
     live: 'https://taskflow-lake-nu.vercel.app',
   },
   {
-    name: 'License Plate Detection', badge: 'CV',
+    group: 'mern', name: 'SpendWise', badge: 'Live',
+    desc: 'Personal finance tracker with auth, a real database, and interactive spending charts.',
+    stack: ['Next.js', 'NextAuth', 'Prisma', 'PostgreSQL', 'Recharts'],
+    repo: 'https://github.com/AKHIL1633/spendwise',
+    live: 'https://spendwise-psi-lyart.vercel.app',
+  },
+  // AI
+  {
+    group: 'ai', name: 'GitHub PR AI Reviewer', badge: 'Multi-agent',
+    desc: 'Four LangGraph agents (static analysis, security, style, architecture) review every pull request in parallel and post inline comments. Celery workers, deployed on AWS EKS.',
+    stack: ['Python', 'LangGraph', 'Celery', 'Redis', 'AWS EKS', 'Terraform'],
+    repo: 'https://github.com/AKHIL1633/github-pr-ai-reviewer', live: null,
+  },
+  {
+    group: 'ai', name: 'PulseDesk', badge: 'AI Agent',
+    desc: 'AI ticket-triage agent — mobile app + web dashboard + API, with an LLM classifying and drafting responses under human review.',
+    stack: ['Express', 'Next.js', 'React Native', 'Prisma', 'Gemini'],
+    repo: 'https://github.com/AKHIL1633/pulsedesk', live: null,
+  },
+  {
+    group: 'ai', name: 'GrowEasy CSV Importer', badge: 'Live',
+    desc: 'AI app that maps any CSV layout onto a fixed CRM schema, with production-grade retry and validation.',
+    stack: ['Next.js', 'Express', 'TypeScript', 'Gemini'],
+    repo: 'https://github.com/AKHIL1633/groweasy-csv-importer',
+    live: 'https://groweasy-csv-importer-web-ten.vercel.app',
+  },
+  {
+    group: 'ai', name: 'AI Complaint Management', badge: 'Live',
+    desc: 'Chat copilot that fills and edits pharmaceutical complaint forms from conversation — the form is never filled by hand.',
+    stack: ['Python', 'React', 'LLM'],
+    repo: 'https://github.com/AKHIL1633/ai-complaint-management-system',
+    live: 'https://ai-complaint-management-system-hazel.vercel.app',
+  },
+  {
+    group: 'ai', name: 'AI Text Detection', badge: 'IEEE',
+    desc: 'BERT + CNN + BiLSTM + XGBoost ensemble that detects AI-generated text with 98.83% accuracy, served through FastAPI.',
+    stack: ['PyTorch', 'Transformers', 'XGBoost', 'FastAPI'],
+    repo: 'https://github.com/AKHIL1633/Ai-text-detection', live: null,
+  },
+  {
+    group: 'ai', name: 'NeoRAG', badge: 'RAG',
+    desc: 'Knowledge-graph Q&A API: turns text into a Neo4j graph and answers questions through an agentic pipeline with a self-critique retry loop.',
+    stack: ['FastAPI', 'Neo4j', 'Qdrant', 'LangGraph', 'Llama 3.2'],
+    repo: 'https://github.com/AKHIL1633/neorag', live: null,
+  },
+  {
+    group: 'ai', name: 'License Plate Detection', badge: 'CV',
     desc: 'Custom-trained YOLOv8 + OCR pipeline with live WebRTC video detection of vehicle number plates.',
     stack: ['Python', 'YOLOv8', 'EasyOCR', 'Streamlit'],
     repo: 'https://github.com/AKHIL1633/Automatic_License_Plate_Detection', live: null,
+  },
+  // Python backend
+  {
+    group: 'python', name: 'Order Processing Platform', badge: 'Celery',
+    desc: 'Async order API that responds immediately while Celery workers validate stock, process payment, update status and send notifications outside the request cycle.',
+    stack: ['Python', 'Celery', 'Redis', 'Docker'],
+    repo: 'https://github.com/AKHIL1633/order-processing-platform', live: null,
+  },
+  {
+    group: 'python', name: 'JobBoard Pro', badge: 'Django',
+    desc: 'Recruitment platform with role-based auth and application tracking; Celery workers send notifications asynchronously so API responses stay fast.',
+    stack: ['Django REST', 'Celery', 'Redis', 'PostgreSQL', 'React', 'Docker'],
+    repo: 'https://github.com/AKHIL1633/jobboard-pro', live: null,
+  },
+  {
+    group: 'python', name: 'ResumeIQ', badge: 'FastAPI',
+    desc: 'Resume screening and ranking API with JWT auth, a weighted scoring engine, Alembic migrations and 36 passing tests in CI.',
+    stack: ['FastAPI', 'SQLAlchemy', 'Alembic', 'Docker'],
+    repo: 'https://github.com/AKHIL1633/resume-screener', live: null,
   },
 ];
 
@@ -99,7 +134,7 @@ const ACHIEVEMENTS = [
   { icon: '🏅', title: 'TCS Star Performer', note: 'Award' },
 ];
 
-const ROLES = ['Python Back End Developer', 'Celery & Async Systems', 'AI / LLM Engineer', 'Problem Solver'];
+const ROLES = ['Full Stack Developer', 'MERN Stack Developer', 'Python Backend Developer', 'AI / LLM Engineer'];
 
 // ---------- Render ----------
 const el = (tag, cls, html) => { const n = document.createElement(tag); if (cls) n.className = cls; if (html != null) n.innerHTML = html; return n; };
@@ -118,8 +153,21 @@ function renderSkills() {
 }
 
 function renderProjects() {
-  const grid = document.getElementById('projectsGrid');
-  PROJECTS.forEach((p, i) => {
+  const wrap = document.getElementById('projectsGrid');
+  PROJECT_GROUPS.forEach((g) => {
+    const head = el('div', 'project-group-head reveal');
+    head.id = `projects-${g.id}`;
+    head.appendChild(el('h3', null, g.title));
+    head.appendChild(el('p', null, g.blurb));
+    wrap.appendChild(head);
+    const grid = el('div', 'projects-grid');
+    wrap.appendChild(grid);
+    renderProjectCards(grid, PROJECTS.filter((p) => p.group === g.id));
+  });
+}
+
+function renderProjectCards(grid, projects) {
+  projects.forEach((p, i) => {
     const card = el('article', 'project reveal');
     card.style.transitionDelay = `${(i % 3) * 70}ms`;
     const top = el('div', 'project-top');
